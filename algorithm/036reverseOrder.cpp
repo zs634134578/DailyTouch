@@ -12,6 +12,13 @@ using namespace std;
 
 class Solution
 {
+    int countReverse(int* intArray, int len)
+    {
+        if (intArray == NULL || len <= 1)
+            return 0;
+        
+
+    }
 
 };
 int main()

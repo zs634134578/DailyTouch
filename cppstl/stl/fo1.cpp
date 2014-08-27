@@ -19,7 +19,6 @@ int main()
 {
     set<int,greater<int> > coll1;
     deque<int> coll2;
-
     // insert elements from 1 to 9
     for (int i=1; i<=9; ++i) {
         coll1.insert(i);

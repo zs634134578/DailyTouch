@@ -20,8 +20,11 @@ int main()
 
    // print maximum of integral types
    cout << "max(short): " << numeric_limits<short>::max() << endl;
+   cout << "min(shor): "<< numeric_limits<short>::min() << std::endl;
    cout << "max(int):   " << numeric_limits<int>::max() << endl;
+   cout << "min(int):   " << numeric_limits<int>::min() << endl;
    cout << "max(long):  " << numeric_limits<long>::max() << endl;
+   cout << "min(long):  " << numeric_limits<long>::min()
    cout << endl;
 
    // print maximum of floating-point types

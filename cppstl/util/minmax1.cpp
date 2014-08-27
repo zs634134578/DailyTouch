@@ -8,6 +8,7 @@
  * This software is provided "as is" without express or implied
  * warranty, and with no claim as to its suitability for any purpose.
  */
+#include <iostream>
 #include <algorithm>
 using namespace std;
 
@@ -28,5 +29,7 @@ int main()
 
     // call max() with special comparison function
     pmax = max (px, py, int_ptr_less);
+    int* pmin = min (px, py, int_ptr_less);
+    std::cout << *pmin<< std::endl;
     //...
 }
