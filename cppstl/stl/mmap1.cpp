@@ -36,7 +36,7 @@ int main()
      */
     IntStringMMap::iterator pos;
     for (pos = coll.begin(); pos != coll.end(); ++pos) {
-        cout << pos->second << ' ';
+        cout << pos->first <<":\t" << pos->second << std::endl;
     }
     cout << endl;
 }

@@ -20,6 +20,8 @@ int main()
     for (int i=1; i<=6; ++i) {
         coll.push_front(i*1.1);      // insert at the front
     }
+    coll.insert(coll.begin(), 2222);
+
 
     // print all elements followed by a space
     for (int i=0; i<coll.size(); ++i) {

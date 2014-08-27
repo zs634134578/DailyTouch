@@ -37,7 +37,7 @@ int main()
 
     // find the first element with value 3
     pos = find (coll.begin(), coll.end(),  // range
-                3);                        // value
+                9);                        // value
 
     // reverse the order of the found element with value 3 and all following elements
     reverse (pos, coll.end());

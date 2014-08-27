@@ -24,9 +24,15 @@ int main()
         coll1.push_back(i);
     }
 
+    coll2.resize(coll1.size());
+    
     // RUNTIME ERROR:
     // - overwrites nonexisting elements in the destination
     copy (coll1.begin(), coll1.end(),     // source
           coll2.begin());                 // destination
     //...
+    for (vector<int>::iterator it = coll2.begin();
+         it != coll2.end();
+         it++)
+        std::cout << *it << std::endl;
 }

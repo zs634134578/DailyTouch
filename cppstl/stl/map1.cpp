@@ -29,6 +29,7 @@ int main()
     coll["Pi"] = 3.1415;
     coll["an arbitrary number"] = 4983.223;
     coll["Null"] = 0;
+    coll.insert(StringFloatMap::value_type("Hello", 123.45));
 
     /* print all elements
      * - iterate over all elements
@@ -37,7 +38,7 @@ int main()
      */
     StringFloatMap::iterator pos;
     for (pos = coll.begin(); pos != coll.end(); ++pos) {
-        cout << "key: \"" << pos->first << "\" "
+        cout << "key: \"" << pos->first << "\"\t "
              << "value: " << pos->second << endl;
     }
 }
