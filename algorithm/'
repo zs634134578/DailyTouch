@@ -1,0 +1,19 @@
+/*
+ *
+ *
+ */
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+#define debug2(x, y) std::cout << "(debug)" << x << y << std::endl;
+#define debug(x) std::cout << "(debug)" << x << std::endl;
+
+int main()
+{
+    debug("Hello world"); 
+    return 0;
+}

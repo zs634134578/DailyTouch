@@ -21,7 +21,7 @@ int main()
     delete a;
     a = NULL;
 
-    B* b = new B();
-    std::tr1::shared_ptr<B> spt(b);
+//    B* b = new B();
+    std::tr1::shared_ptr<B> spt(new B());
     return 0;
 }
