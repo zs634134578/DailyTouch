@@ -2,7 +2,7 @@
  *
  */
 
-#include "common.h"
+#include <iostream>
 
 using namespace std;
 
@@ -16,7 +16,8 @@ class Solution
 int main()
 {
     Solution* solver = new Solution();
-
+    long *f(int);
+    int (*(*f1)(int, int))(int);
     print("Hello world!");
     return 0;
 }

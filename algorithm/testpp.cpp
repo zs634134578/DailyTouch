@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string.h>
+#include <typeinfo>
 using namespace std;
 
 #define debug(x, y) std::cout << "(debug)" << x << y << std::endl;
@@ -35,6 +36,8 @@ int main()
 {
     Solution* solver = new Solution();
     solver->test1();
+    char a[8];
+    std::cout << typeid(a).name() << std::endl;
     print("Hello world!");
     return 0;
 }

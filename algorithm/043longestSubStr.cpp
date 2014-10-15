@@ -22,6 +22,15 @@ public:
        this->alen = alen;
        this->blen = blen;
     }
+    void printEachLine(int* a, int lineNum, int len)
+    {
+        std::cout << "i=" << lineNum << ":\t";
+        for( int i = 0; i < len; i++)
+        {
+            std::cout << *(a + i) << "  ";
+        }
+        std::cout << std::endl;
+    }
 
     void getLCS(char* result)
     {
@@ -49,6 +58,13 @@ public:
             }
         }
         int maxlen = 0;
+        std::cout << "j=     ";
+        for(int i = 0; i < this->blen; i++)
+            std::cout << "(" << i << ")";
+        std::cout << std::endl;
+        for( int i = 0; i < alen; i++)
+            this->printEachLine(*(c+i),i, this->blen);
+
         for(int i=0; i<alen; i++)
             for(int j=0; j<blen; j++)
                 if (c[i][j] > maxlen)
@@ -75,8 +91,8 @@ private:
 int main()
 {
     char a[14] = "aocdfacddcdfe";
-    char b[11] = "pmcdfacdfe";
-    LCSer* lcser = new LCSer(a,13, b, 10);
+    char b[12] = "qpmcdfacdfe";
+    LCSer* lcser = new LCSer(a,13, b, 11);
     char result[11];
     lcser->getLCS(result);
     debug("Hello world"); 

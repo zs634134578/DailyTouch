@@ -20,7 +20,9 @@
  */
 
 #include "stdio.h"
+#include <iostream>
 #include<memory>
+#define debugch(x) std::cout << "(debugch):" << x << std::endl;
 int main()
 {
     /*
@@ -41,7 +43,15 @@ int main()
             *(p3+sizeof(p1)-3)  
           );  
     */
+    char *str[] = {"one", "two", "three"};
+    char **p = str;
+    debugch(**p);
+    debugch(**(p+1));
+    debugch(**str);
+    printf("%c\n", **str);
+    debugch(*(str+1)[0]);
 }
+/*
 class A
 {
     public:
@@ -71,3 +81,4 @@ void bar3()
             A *pa = &c;
                 B *pb = static_cast<B*>(static_cast<C*>(pa));
 }
+*/

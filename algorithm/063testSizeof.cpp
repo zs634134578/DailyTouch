@@ -2,7 +2,8 @@
  *
  */
 
-#include "common.h"
+#include <iostream>
+#include<string>
 
 using namespace std;
 
@@ -16,7 +17,9 @@ class Solution
 int main()
 {
     Solution* solver = new Solution();
-
+    debug("sizeof(string):", sizeof(string));
+    string str("1234567");
+    debug("sizeof(str)", sizeof(str));
     print("Hello world!");
     return 0;
 }

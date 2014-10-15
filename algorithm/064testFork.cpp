@@ -2,7 +2,10 @@
  *
  */
 
-#include "common.h"
+#include <iostream>
+#include <stdio.h>
+//#include <sys/types.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -16,7 +19,12 @@ class Solution
 int main()
 {
     Solution* solver = new Solution();
-
-    print("Hello world!");
+    
+    for( int i = 0; i < 2; i++)
+    {
+        fork();
+        printf("ppid:%d, pid:%d, i=%d\n", getppid(),getpid(), i);
+    }
+    printf("\n");
     return 0;
 }
