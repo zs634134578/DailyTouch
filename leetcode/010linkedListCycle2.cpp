@@ -23,19 +23,24 @@ class Solution {
             if ( head == NULL || head->next == NULL)
                 return head;
             ListNode* p1 = head, *p2 = head, *p3 = head;
+            bool hasCircle = true;
             do {
+                if (p1 == NULL or p2 == NULL or p2->next == NULL
+                    or p2->next->next == NULL)
+                {
+                    hasCircle = false;
+                    break;
+                }
                 p1 = p1->next;
                 p2 = p2->next->next;
-                debug("p1:",p1->val);
-                debug("p2:",p1->val);
             } while( p1 != p2);
-            debug("meet node: ", p1->val);
+            if ( !hasCircle )
+                return NULL;
             while( p1 != p3)
             {
                 p1 = p1->next;
                 p3 = p3->next;
             }
-            debug("start node: ", p1->val);
             return p1;
         }
 };
