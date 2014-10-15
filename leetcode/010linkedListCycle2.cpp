@@ -7,9 +7,8 @@
 
 
 #include <iostream>
+#include "common.h"
 using namespace std;
-
-#define debug(x) std::cout << "debug: " << x << std::endl;
 
 struct ListNode {
     int val;
@@ -23,9 +22,22 @@ class Solution {
         ListNode* detectCycle(ListNode* head){
             if ( head == NULL || head->next == NULL)
                 return head;
-            
+            ListNode* p1 = head, *p2 = head, *p3 = head;
+            do {
+                p1 = p1->next;
+                p2 = p2->next->next;
+                debug("p1:",p1->val);
+                debug("p2:",p1->val);
+            } while( p1 != p2);
+            debug("meet node: ", p1->val);
+            while( p1 != p3)
+            {
+                p1 = p1->next;
+                p3 = p3->next;
+            }
+            debug("start node: ", p1->val);
+            return p1;
         }
-    
 };
 
 ListNode* getList(){
