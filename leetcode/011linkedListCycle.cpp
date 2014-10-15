@@ -7,9 +7,9 @@
 
 
 #include <iostream>
+#include "common.h"
 using namespace std;
 
-#define debug(x) std::cout << "debug: " << x << std::endl;
 
 struct ListNode {
     int val;
@@ -20,10 +20,28 @@ struct ListNode {
 
 class Solution {
     public:
-        ListNode* detectCycle(ListNode* head){
+        bool detectCycle(ListNode* head){
             if ( head == NULL || head->next == NULL)
-                return head;
-            
+                return NULL;
+
+            ListNode* p1 = head, *p2 = head;
+            bool hasCircle = true;
+            do {
+                if (  p1 == NULL
+                    || p2 == NULL
+                    || p1->next == NULL
+                    || p2->next == NULL
+                    || p2->next->next == NULL)
+                {
+                    hasCircle = false;
+                    break;
+                }
+                p1 = p1->next;
+                p2 = p2->next->next;
+            } while( p1 != p2 );
+            if (hasCircle)
+                return true;
+            return false;
         }
     
 };
