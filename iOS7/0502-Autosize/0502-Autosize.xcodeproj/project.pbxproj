@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFBA16021A037A3D00B00D43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBA16011A037A3D00B00D43 /* Foundation.framework */; };
+		BFBA16041A037A3D00B00D43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBA16031A037A3D00B00D43 /* CoreGraphics.framework */; };
+		BFBA16061A037A3D00B00D43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBA16051A037A3D00B00D43 /* UIKit.framework */; };
+		BFBA160C1A037A3D00B00D43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFBA160A1A037A3D00B00D43 /* InfoPlist.strings */; };
+		BFBA160E1A037A3D00B00D43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA160D1A037A3D00B00D43 /* main.m */; };
+		BFBA16121A037A3D00B00D43 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA16111A037A3D00B00D43 /* BIDAppDelegate.m */; };
+		BFBA16151A037A3D00B00D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBA16131A037A3D00B00D43 /* Main.storyboard */; };
+		BFBA16181A037A3D00B00D43 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA16171A037A3D00B00D43 /* BIDViewController.m */; };
+		BFBA161A1A037A3D00B00D43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFBA16191A037A3D00B00D43 /* Images.xcassets */; };
+		BFBA16211A037A3D00B00D43 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBA16201A037A3D00B00D43 /* XCTest.framework */; };
+		BFBA16221A037A3D00B00D43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBA16011A037A3D00B00D43 /* Foundation.framework */; };
+		BFBA16231A037A3D00B00D43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBA16051A037A3D00B00D43 /* UIKit.framework */; };
+		BFBA162B1A037A3D00B00D43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFBA16291A037A3D00B00D43 /* InfoPlist.strings */; };
+		BFBA162D1A037A3D00B00D43 /* _502_AutosizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA162C1A037A3D00B00D43 /* _502_AutosizeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFBA16241A037A3D00B00D43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFBA15F61A037A3D00B00D43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFBA15FD1A037A3D00B00D43;
+			remoteInfo = "0502-Autosize";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFBA15FE1A037A3D00B00D43 /* 0502-Autosize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0502-Autosize.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFBA16011A037A3D00B00D43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFBA16031A037A3D00B00D43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BFBA16051A037A3D00B00D43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BFBA16091A037A3D00B00D43 /* 0502-Autosize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "0502-Autosize-Info.plist"; sourceTree = "<group>"; };
+		BFBA160B1A037A3D00B00D43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFBA160D1A037A3D00B00D43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFBA160F1A037A3D00B00D43 /* 0502-Autosize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "0502-Autosize-Prefix.pch"; sourceTree = "<group>"; };
+		BFBA16101A037A3D00B00D43 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
+		BFBA16111A037A3D00B00D43 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
+		BFBA16141A037A3D00B00D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFBA16161A037A3D00B00D43 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
+		BFBA16171A037A3D00B00D43 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
+		BFBA16191A037A3D00B00D43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BFBA161F1A037A3D00B00D43 /* 0502-AutosizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "0502-AutosizeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFBA16201A037A3D00B00D43 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BFBA16281A037A3D00B00D43 /* 0502-AutosizeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "0502-AutosizeTests-Info.plist"; sourceTree = "<group>"; };
+		BFBA162A1A037A3D00B00D43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFBA162C1A037A3D00B00D43 /* _502_AutosizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _502_AutosizeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFBA15FB1A037A3D00B00D43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA16041A037A3D00B00D43 /* CoreGraphics.framework in Frameworks */,
+				BFBA16061A037A3D00B00D43 /* UIKit.framework in Frameworks */,
+				BFBA16021A037A3D00B00D43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFBA161C1A037A3D00B00D43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA16211A037A3D00B00D43 /* XCTest.framework in Frameworks */,
+				BFBA16231A037A3D00B00D43 /* UIKit.framework in Frameworks */,
+				BFBA16221A037A3D00B00D43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFBA15F51A037A3D00B00D43 = {
+			isa = PBXGroup;
+			children = (
+				BFBA16071A037A3D00B00D43 /* 0502-Autosize */,
+				BFBA16261A037A3D00B00D43 /* 0502-AutosizeTests */,
+				BFBA16001A037A3D00B00D43 /* Frameworks */,
+				BFBA15FF1A037A3D00B00D43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFBA15FF1A037A3D00B00D43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA15FE1A037A3D00B00D43 /* 0502-Autosize.app */,
+				BFBA161F1A037A3D00B00D43 /* 0502-AutosizeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFBA16001A037A3D00B00D43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA16011A037A3D00B00D43 /* Foundation.framework */,
+				BFBA16031A037A3D00B00D43 /* CoreGraphics.framework */,
+				BFBA16051A037A3D00B00D43 /* UIKit.framework */,
+				BFBA16201A037A3D00B00D43 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFBA16071A037A3D00B00D43 /* 0502-Autosize */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA16101A037A3D00B00D43 /* BIDAppDelegate.h */,
+				BFBA16111A037A3D00B00D43 /* BIDAppDelegate.m */,
+				BFBA16131A037A3D00B00D43 /* Main.storyboard */,
+				BFBA16161A037A3D00B00D43 /* BIDViewController.h */,
+				BFBA16171A037A3D00B00D43 /* BIDViewController.m */,
+				BFBA16191A037A3D00B00D43 /* Images.xcassets */,
+				BFBA16081A037A3D00B00D43 /* Supporting Files */,
+			);
+			path = "0502-Autosize";
+			sourceTree = "<group>";
+		};
+		BFBA16081A037A3D00B00D43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA16091A037A3D00B00D43 /* 0502-Autosize-Info.plist */,
+				BFBA160A1A037A3D00B00D43 /* InfoPlist.strings */,
+				BFBA160D1A037A3D00B00D43 /* main.m */,
+				BFBA160F1A037A3D00B00D43 /* 0502-Autosize-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFBA16261A037A3D00B00D43 /* 0502-AutosizeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA162C1A037A3D00B00D43 /* _502_AutosizeTests.m */,
+				BFBA16271A037A3D00B00D43 /* Supporting Files */,
+			);
+			path = "0502-AutosizeTests";
+			sourceTree = "<group>";
+		};
+		BFBA16271A037A3D00B00D43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA16281A037A3D00B00D43 /* 0502-AutosizeTests-Info.plist */,
+				BFBA16291A037A3D00B00D43 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFBA15FD1A037A3D00B00D43 /* 0502-Autosize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFBA16301A037A3D00B00D43 /* Build configuration list for PBXNativeTarget "0502-Autosize" */;
+			buildPhases = (
+				BFBA15FA1A037A3D00B00D43 /* Sources */,
+				BFBA15FB1A037A3D00B00D43 /* Frameworks */,
+				BFBA15FC1A037A3D00B00D43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0502-Autosize";
+			productName = "0502-Autosize";
+			productReference = BFBA15FE1A037A3D00B00D43 /* 0502-Autosize.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFBA161E1A037A3D00B00D43 /* 0502-AutosizeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFBA16331A037A3D00B00D43 /* Build configuration list for PBXNativeTarget "0502-AutosizeTests" */;
+			buildPhases = (
+				BFBA161B1A037A3D00B00D43 /* Sources */,
+				BFBA161C1A037A3D00B00D43 /* Frameworks */,
+				BFBA161D1A037A3D00B00D43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFBA16251A037A3D00B00D43 /* PBXTargetDependency */,
+			);
+			name = "0502-AutosizeTests";
+			productName = "0502-AutosizeTests";
+			productReference = BFBA161F1A037A3D00B00D43 /* 0502-AutosizeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFBA15F61A037A3D00B00D43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BID;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					BFBA161E1A037A3D00B00D43 = {
+						TestTargetID = BFBA15FD1A037A3D00B00D43;
+					};
+				};
+			};
+			buildConfigurationList = BFBA15F91A037A3D00B00D43 /* Build configuration list for PBXProject "0502-Autosize" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFBA15F51A037A3D00B00D43;
+			productRefGroup = BFBA15FF1A037A3D00B00D43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFBA15FD1A037A3D00B00D43 /* 0502-Autosize */,
+				BFBA161E1A037A3D00B00D43 /* 0502-AutosizeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFBA15FC1A037A3D00B00D43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA161A1A037A3D00B00D43 /* Images.xcassets in Resources */,
+				BFBA160C1A037A3D00B00D43 /* InfoPlist.strings in Resources */,
+				BFBA16151A037A3D00B00D43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFBA161D1A037A3D00B00D43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA162B1A037A3D00B00D43 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFBA15FA1A037A3D00B00D43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA16121A037A3D00B00D43 /* BIDAppDelegate.m in Sources */,
+				BFBA16181A037A3D00B00D43 /* BIDViewController.m in Sources */,
+				BFBA160E1A037A3D00B00D43 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFBA161B1A037A3D00B00D43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA162D1A037A3D00B00D43 /* _502_AutosizeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFBA16251A037A3D00B00D43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFBA15FD1A037A3D00B00D43 /* 0502-Autosize */;
+			targetProxy = BFBA16241A037A3D00B00D43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFBA160A1A037A3D00B00D43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFBA160B1A037A3D00B00D43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BFBA16131A037A3D00B00D43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFBA16141A037A3D00B00D43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFBA16291A037A3D00B00D43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFBA162A1A037A3D00B00D43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFBA162E1A037A3D00B00D43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BFBA162F1A037A3D00B00D43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFBA16311A037A3D00B00D43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "0502-Autosize/0502-Autosize-Prefix.pch";
+				INFOPLIST_FILE = "0502-Autosize/0502-Autosize-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BFBA16321A037A3D00B00D43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "0502-Autosize/0502-Autosize-Prefix.pch";
+				INFOPLIST_FILE = "0502-Autosize/0502-Autosize-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BFBA16341A037A3D00B00D43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/0502-Autosize.app/0502-Autosize";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "0502-Autosize/0502-Autosize-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "0502-AutosizeTests/0502-AutosizeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BFBA16351A037A3D00B00D43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/0502-Autosize.app/0502-Autosize";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "0502-Autosize/0502-Autosize-Prefix.pch";
+				INFOPLIST_FILE = "0502-AutosizeTests/0502-AutosizeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFBA15F91A037A3D00B00D43 /* Build configuration list for PBXProject "0502-Autosize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFBA162E1A037A3D00B00D43 /* Debug */,
+				BFBA162F1A037A3D00B00D43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFBA16301A037A3D00B00D43 /* Build configuration list for PBXNativeTarget "0502-Autosize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFBA16311A037A3D00B00D43 /* Debug */,
+				BFBA16321A037A3D00B00D43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFBA16331A037A3D00B00D43 /* Build configuration list for PBXNativeTarget "0502-AutosizeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFBA16341A037A3D00B00D43 /* Debug */,
+				BFBA16351A037A3D00B00D43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFBA15F61A037A3D00B00D43 /* Project object */;
+}
