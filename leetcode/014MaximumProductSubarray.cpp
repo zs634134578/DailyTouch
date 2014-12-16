@@ -11,6 +11,53 @@ using namespace std;
 class Solution
 {
 public:
+
+    long max3(long a, long b, long c)
+    {
+        debug("a:", a);
+        debug("b:", b);
+        debug("c:", c);
+
+        long d = a > b ? a : b;
+        debug("d:", c);
+        return d > c ? d : c;
+    }
+
+    long min3(long a, long b, long c)
+    {
+        long d = a < b ? a : b;
+        return d < c ? d : c;
+    }
+
+
+    int maxProduct3(int arr[], int n)
+    {
+        if ( n == 1)
+            return arr[0];
+        long max = arr[0];
+        long min = arr[0]; 
+        long result = arr[0];
+        long tmpMax;
+        long tmpMin;
+        for(int i = 1; i < n; i++)
+        {
+            debug("old max:", max);
+            debug("old min:", min);
+
+            tmpMax = max * arr[i];
+            tmpMin = min * arr[i];
+            debug("tmpMax:", tmpMax);
+            debug("tmpMin:", tmpMin);
+            max = max3(tmpMax, tmpMin, arr[i]);
+            min = min3(tmpMax, tmpMin, arr[i]);
+            result = result > max ? result : max ;
+            debug("max:", max);
+            debug("min:", min);
+            debug("result:", result);
+        }
+        return result;
+    }
+
     
     int maxProduct1(int arr[], int n) {
         /*
@@ -149,11 +196,14 @@ public:
 int main()
 {
     Solution* solver = new Solution();
-    int arr[4] = {-3, 0,  1, -2};
-    long result1 = solver->maxProduct1(arr, 4);
-    long result2 = solver->maxProduct(arr, 4);
+    int arr[3] = {-2, -3, 7};
+    long result1 = solver->maxProduct1(arr, 3);
+    long result2 = solver->maxProduct(arr, 3);
+    long result3 =solver->maxProduct3(arr, 3);
     debug("result1: ", result1);
     debug("result2: ", result2);
+    debug("result3: ", result3);
+
     print("Hello world!");
     return 0;
 }

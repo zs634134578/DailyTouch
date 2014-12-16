@@ -14,38 +14,37 @@
 #include<vector>
 #include<string>
 #include<unordered_set>
+#include "common.h"
 
 using namespace std;
-
-#define debug(x, y) std::cout << "(debug)" << x << y << std::endl;
 
 class Solution
 {
     public:
         vector<string> wordBreak(string s, unordered_set<string> &dict)
         {
-            int len;
-            string prefix;
-            for(unordered_set<string>::iterator it = dict.begin();
-                it != dict.end();
-                it++)
+            vector<string> result;
+            if ( s.length() < 1)
+                return result;
+            //bool flag = false; 
+            for ( unsigned int i = 0; i <= s.length(); i++)
             {
-                debug("*it:", *it);
-                len = (*it).size();
-                string::size_type begin;
-                begin = s.find(s.c_str(), 0, static_cast<string::size_type>(len));
-                debug("begin:", begin);
-                if (begin == string::npos);
-                    continue;
-                prefix = s.substr(0, len-1);
-                debug("prefix:", prefix);
-                wordBreak(s.substr(len), dict);
+                string tmpstr = s.substr(0, i);
+  //              debug("tmpstr: ", tmpstr);
+                unordered_set<string>::iterator it = dict.find(tmpstr);
+                vector<string> tmpvec;
+                if ( it != dict.end())
+                {
+ //                   debug("after find: ", *it);
+                    result.push_back(tmpstr);
+                    if (tmpstr.length() == s.length())
+//                    debug("find: ", tmpstr);
+                    tmpvec= wordBreak(s.substr(i), dict);
+                    if ( !tmpvec.empty())
+                        result.insert(result.end(), tmpvec.begin(), tmpvec.end());
+                }
             }
-            
-            debug("s:", s);
-            s.find("cats");
-            vector<string> sv;
-            return sv;
+            return result;
         }
 
 };
@@ -55,7 +54,9 @@ int main()
     unordered_set<string> dict({"cat", "cats", "and", "sand", "dog"});
     std::string s("catsanddog");
     Solution* solver = new Solution();
-    solver->wordBreak(s, dict);
+    vector<string> result = solver->wordBreak(s, dict);
+    printVec<string>(result);
+    debug("result size: ", result.size());
     debug("", "Hello world");
     return 0;
 }
