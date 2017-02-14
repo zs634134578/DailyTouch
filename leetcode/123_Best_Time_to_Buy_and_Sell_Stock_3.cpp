@@ -63,8 +63,8 @@ public:
 
 int main(int argc, char* argv[])
 {
-    //google::InitGoogleLogging(argv[0]);
-    //FLAGS_log_dir = "./log";
+    google::InitGoogleLogging(argv[0]);
+    FLAGS_log_dir = "./log";
     Solution solution;
     std::vector<int> prices; 
     prices.push_back(3);
