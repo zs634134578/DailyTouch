@@ -79,5 +79,6 @@ int main()
                      new Node(6)));
     Solution solution;
     solution.PrintBoundary(root);
+    PrettyPrint(root);
     return 0;
 }
