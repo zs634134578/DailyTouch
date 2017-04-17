@@ -63,6 +63,51 @@ void printNodeWithSpecificWidth(Node* node, int level,
     std::cout << std::endl;
 }
 
+std::string Serialize(Node* node)
+{
+    if (node == NULL)
+    {
+        return "#!";
+    }
+    std::string nodeStr(node->ToString());
+    nodeStr.append("!");
+    nodeStr += Serialize(node->left);
+    nodeStr += Serialize(node->right);
+    return nodeStr;
+}
+
+Node* DeSerialize(const std::string& seriaStr)
+{
+    size_t startPos = 0;
+    std::queue<std::string> nodeQueue;
+    size_t prevBoundary = 0;
+    size_t nextBoundary = 0;
+    const char* boundary = "!";
+    nextBoundary = seriaStr.find(boundary, prevBoundary);
+    while ((nextBoundary = seriaStr.find(boundary, prevBoundary))
+            != std::string::npos)
+    {
+        nodeQueue.push(seriaStr.substr(prevBoundary, nextBoundary - prevBoundary));
+        prevBoundary = nextBoundary + 1;
+    }
+    return deSerializeImp(nodeQueue);
+}
+
+Node* deSerializeImp(std::queue<std::string>& nodeQueue)
+{
+    if (nodeQueue.empty() || 
+        nodeQueue.front() == "#")
+    {
+        nodeQueue.pop();
+        return NULL;
+    }
+    Node* node = new Node(atoi(nodeQueue.front().c_str()));
+    nodeQueue.pop();
+    node->left = deSerializeImp(nodeQueue);
+    node->right = deSerializeImp(nodeQueue);
+    return node;
+}
+
 }
 }
 

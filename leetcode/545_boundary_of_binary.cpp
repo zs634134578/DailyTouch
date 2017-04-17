@@ -80,5 +80,9 @@ int main()
     Solution solution;
     solution.PrintBoundary(root);
     PrettyPrint(root);
-    return 0;
+    std::cout << "Serialize" << std::endl;
+    std::string deseriaStr = Serialize(root);
+    std::cout << deseriaStr << std::endl;
+    std::cout << "DeSerialzie" << std::endl;
+    PrettyPrint(DeSerialize(deseriaStr));
 }
