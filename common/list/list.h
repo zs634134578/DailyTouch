@@ -13,6 +13,7 @@ struct ListNode
     int val;
     ListNode* next;
     ListNode(int x) : val(x), next(NULL) {}
+    // may mem leak. be careful.
     ListNode(int x, ListNode* _next) : val(x), next(_next) {}
 };
 

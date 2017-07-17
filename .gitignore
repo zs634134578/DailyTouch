@@ -1,4 +1,5 @@
 *.swp
+*.sw*
 a.out
 core
 common/glog

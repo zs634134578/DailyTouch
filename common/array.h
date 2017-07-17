@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 namespace common
 {
@@ -18,6 +19,15 @@ void print(int* array, int len)
             std::cout << array[index] << std::endl;
         }
     }
+}
+
+void print(const std::vector<int>& nums)
+{
+    for (auto num : nums)
+    {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
 }
 
 } // array
