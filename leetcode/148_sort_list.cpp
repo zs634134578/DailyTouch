@@ -8,35 +8,30 @@ public:
     ListNode* sortList(ListNode* head) {
         if (head == NULL)
             return NULL;
-        ListNode* endNode = head;
-        while (endNode->next != NULL)
-            endNode = endNode->next;
-        return mergeSort(head, NULL);
+        return mergeSort(head);
     }
 private:
-    ListNode* mergeSort(ListNode* startNode,
-                        ListNode* endNode)
+    ListNode* mergeSort(ListNode* head)
     {
-        if (startNode == NULL)
-            return startNode;
-        ListNode* midNode = findMidNode(startNode, endNode);
-        if (midNode == NULL)
-            return startNode;
-        mergeSort(startNode, midNode);
-        mergeSort(midNode->next, endNode);
-        return mergeList(startNode, midNode, endNode);
+        if (head == NULL || head->next == NULL)
+            return head;
+        ListNode* midNode = findMidNode(head);
+        ListNode* head1 = head;
+        ListNode* head2 = midNode->next;
+        midNode->next = NULL; // split up list
+        head1 = mergeSort(head1);
+        head2 = mergeSort(head2);
+        return mergeList(head1, head2);
     }
-    ListNode* findMidNode(ListNode* startNode,
-                          ListNode* endNode)
+    ListNode* findMidNode(ListNode* head)
     {
-        if (startNode == NULL)
+        if (head == NULL || head->next == NULL)
         {
-            return NULL;
+            return head;
         }
-        ListNode* pOneStep = startNode;
-        ListNode* pTwoStep = startNode;
+        ListNode* pOneStep = head;
+        ListNode* pTwoStep = head->next;
         while (pTwoStep != NULL
-               && pTwoStep != endNode
                && pTwoStep->next != NULL)
         {
             pTwoStep = pTwoStep->next->next;
@@ -44,45 +39,45 @@ private:
         }
         return pOneStep;
     }
-    ListNode* mergeList(ListNode* startNode,
-                        ListNode* midNode,
-                        ListNode* endNode)
+    ListNode* mergeList(ListNode* head1,
+                        ListNode* head2)
     {
-        if (startNode == NULL || midNode == NULL)
-            return NULL;
-        assert(endNode != NULL);
-        ListNode* p1 = startNode;
-        ListNode* p2 = midNode->next;
-        ListNode* pHead = NULL;
-        ListNode* pCur = NULL;
+        if (head1 == NULL)
+            return head2;
+        if (head2 == NULL)
+            return head1;
+        ListNode* p1 = head1;
+        ListNode* p2 = head2;
+        ListNode* pHead = new ListNode(0);
+        ListNode* pCur = pHead;
         while (p1 != NULL
-               && p2 != NULL
-               && p1 != midNode->next
-               && p2 != endNode->next)
+               && p2 != NULL)
         {
             if (p1->val <= p2->val)
-                pCur = p1;
+            {
+                pCur->next = p1;
+                p1 = p1->next;
+            }
             else
-                pCur = p2;
-            if (pHead == NULL)
-                pHead = pCur;
+            {
+                pCur->next = p2;
+                p2 = p2->next;
+            }
             pCur = pCur->next;
-            p1 = p1->next;
-            p2 = p2->next;
         }
         while (p1 != NULL)
         {
-            pCur = p1;
+            pCur->next = p1;
             pCur = pCur->next;
             p1 = p1->next;
         }
         while (p2 != NULL)
         {
-            pCur = p2;
+            pCur->next = p2;
             pCur = pCur->next;
             p2 = p2->next;
         }
-        return pHead;
+        return pHead->next;
     }
 };
 
